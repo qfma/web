@@ -5,3 +5,11 @@ pygments: true
 # Use a separate source and build folder:
 source: ./src
 destination: ./build
+
+# Configuration for the asset pipeline
+asset_pipeline:
+  bundle: true
+  compress: true
+  output_path: assets
+  display_path: nil
+  gzip: false
