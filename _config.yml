@@ -1,3 +1,7 @@
 name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
+
+# Use a separate source and build folder:
+source: ./src
+destination: ./build
