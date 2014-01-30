@@ -4,6 +4,7 @@ ruby '2.0.0'
 gem 'jekyll'
 gem 'jekyll-slim'
 gem 'compass'
+gem 'uglifier'
 # Solves tilt incompatibility
 gem 'sprockets', :github => 'sstephenson/sprockets'
 gem 'jekyll-assets'
