@@ -1,4 +1,5 @@
 build
+bower_components
 .sass-cache
 .ruby-gemset
 .ruby-version
