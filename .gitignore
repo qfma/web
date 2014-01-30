@@ -2,3 +2,4 @@ build
 .sass-cache
 .ruby-gemset
 .ruby-version
+Gemfile.lock
