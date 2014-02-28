@@ -1,0 +1,44 @@
+// Global Foundation Settings
+@import "settings";
+
+
+// Background color for the top bar
+$topbar-bg-color: rgba(0,0,0,0.5);
+$topbar-bg: $topbar-bg-color;
+$topbar-dropdown-bg: rgba(0,0,0,0.5);
+
+
+// Import Foundation
+@import "foundation/scss/foundation";
+
+body { 
+  background: url(<%= asset_path "bg.png" %>) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.front-header{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 5em;
+    font-family: "Cinzel";
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+h4, p {
+    color: rgb(255,255,255);
+}
+
+.row {
+    background-color: rgba(0,0,0,0.5);
+}

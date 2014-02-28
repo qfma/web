@@ -1,0 +1,44 @@
+// Global Foundation Settings
+@import "settings";
+
+
+// Import Foundation
+@import "foundation/scss/foundation";
+@import "foundation-icons";
+
+
+// Personal stylesheets
+@import "icon-effects";
+@import "footer";
+@import "topbar-transparent";
+
+
+.row {
+    background-color: white;
+}
+
+.full-height {
+  min-height:90vh
+}
+
+.large-white-icon {
+  font-size: 3em;
+  color: white;
+}
+
+.icon-list {
+  @include inline-list;
+  display: inline-block;
+  text-align: center;
+  padding-right: 1em;
+}
+
+.row-transparent{
+  background-color: transparent;
+}
+
+
+.large-black-icon {
+  font-size: 3em;
+  color: black;
+}
