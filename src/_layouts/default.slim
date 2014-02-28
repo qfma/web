@@ -1,30 +1,52 @@
 doctype html
 html
   head
-    | {% css_asset_tag global_css %}
-      - /_assets/css/app.scss
-    | {% endcss_asset_tag %}
+    | {% stylesheet blog %}
+    | {% stylesheet fullscreen-background %}
+    | {% stylesheet pygments %}
+    | {% javascript modernizr/modernizr %}
+
     title
       | {{ page.title }}
-  body
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="#">QFMA</a></h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-      </ul>
 
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="has-dropdown">
-            <a href="#">TEST</a>
-            <ul class="dropdown">
-              <li><a href="#">First link in dropdown</a></li>
-            </ul>
-          </li>
-        </ul>
+  #wrap
+    #main
+      body
 
-      </section>
-    </nav>
+        | {% slim topbar.slim %}
+
+        <!-- Main Page Content and Sidebar -->
+        <div class="row full-height">
+
+          <!-- Main Blog Content -->
+          <div class="large-12 columns" role="content">
+           
+           | {{ content }}
+
+          </div>
+        </div>
+          <!-- End Main Content -->
+
+ 
+  <!-- Footer -->
+  <div id="footer">
+    <div class="row">
+      <div class="large-12 columns text-center" role="content">
+          <ul class="icon-list center">
+            <li><a href="mailto:fabian@qfma.de"><i class="fi-mail large-black-icon"></i></a></li>
+            <li><i class="fi-social-twitter large-black-icon"></i></li>
+            <li><i class="fi-social-github large-black-icon"></i></li>
+          </ul>
+          p Impressum | 2014 QFMA
+      </div>
+    </div>
+  </div>
+
+
+
+
+    | {% javascript jquery/jquery %}
+    | {% javascript fastclick/lib/fastclick %}
+    | {% javascript foundation/js/foundation/foundation %}
+    | {% javascript foundation/js/foundation/foundation.topbar %}
+    <script>$(document).foundation();</script>
