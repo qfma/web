@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    | {% stylesheet frontpage %}
+    | {% stylesheet fullscreen-background %}
+    | {% javascript modernizr/modernizr %}
+
+    title
+      | {{ page.title }}
+
+  #wrap
+    #main
+      body
+
+        | {% slim topbar.slim %}
+
+
+        <header class="front-header">
+          h1 QFMA
+          h3 A biologist who likes to code
+        </header>
+
+        <!-- Main Page Content and Sidebar -->
+        <div class="row">
+          <!-- Main Blog Content -->
+            <div class="large-12 columns row-semi-transparent text-center" role="content">
+              
+              | {{ content }}
+            </div>
+        </div>
+          <!-- End Main Content -->
+
+  <!-- Footer -->
+  <div id="footer">
+    <div class="row">
+      <div class="large-12 columns text-center" role="content">
+          <ul class="icon-list">
+            <li><a href="mailto:fabian@qfma.de"><i class="fi-mail large-white-icon"></i></a></li>
+            <li><i class="fi-social-twitter large-white-icon"></i></li>
+            <li><i class="fi-social-github large-white-icon"></i></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+
+    | {% javascript jquery/jquery %}
+    | {% javascript fastclick/lib/fastclick %}
+    | {% javascript foundation/js/foundation/foundation %}
+    | {% javascript foundation/js/foundation/foundation.topbar %}
+    <script>$(document).foundation();</script>
