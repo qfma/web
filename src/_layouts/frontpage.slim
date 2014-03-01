@@ -16,7 +16,7 @@ html
 
 
         <header class="front-header">
-          h1 QFMA
+          h1 QFMA<span data-tooltip class="has-tip" title="Quintus Fabius Maximus was a Roman politician and general; he is my namesake."><sup><small>*</small></sup></span>
           h3 A biologist who likes to code
         </header>
 
@@ -48,4 +48,6 @@ html
     | {% javascript fastclick/lib/fastclick %}
     | {% javascript foundation/js/foundation/foundation %}
     | {% javascript foundation/js/foundation/foundation.topbar %}
+    | {% javascript foundation/js/foundation/foundation.tooltip %}
+
     <script>$(document).foundation();</script>
