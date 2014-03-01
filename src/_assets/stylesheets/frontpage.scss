@@ -13,7 +13,7 @@
 @import "topbar-transparent";
 
 
-h1 {
+h2 {
     font-size: 5em;
     font-family: "Cinzel";
     color: white;
@@ -51,4 +51,16 @@ h3, h4, p {
   display: inline-block;
   text-align: center;
   padding-right: 1em;
+}
+
+.avatar {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 10%; /* you can use % */
+  height: auto;
+}
+
+#cinzel {
+    font-family: "Cinzel";
 }

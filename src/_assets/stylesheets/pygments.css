@@ -1,8 +1,7 @@
-.highlight .hll { background-color: #333333 }
 
 code, pre {
     font-family: "Source Code Pro", "Courier New", "Courier", "FreeMono", monospace;
-    font-size:0.95em;
+    font-size:1em;
     line-height: 120%;
     margin: 1em 0 1.5em 0;
 }
@@ -13,7 +12,18 @@ font-family: "Source Code Pro", "Courier New", "Courier", "FreeMono", monospace;
 font-size:1em;
 }
 
-.highlight { background-color: #ffffff }
+.highlight {
+    background: #e6e6e6;
+    color: #babdb6;
+    padding-left: 1em;
+    padding-right: .3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-bottom: 3em;
+
+}
+
+/*.highlight { background-color: #ffffff }*/
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
