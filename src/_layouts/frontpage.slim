@@ -15,39 +15,38 @@ html
         | {% slim topbar.slim %}
 
 
-        <header class="front-header">
-          h1 QFMA<span data-tooltip class="has-tip" title="Quintus Fabius Maximus was a Roman politician and general; he is my namesake."><sup><small>*</small></sup></span>
-          h3 A biologist who likes to code
-        </header>
+        header
+          .front-header
+            h1 QFMA<span data-tooltip class="has-tip" title="Quintus Fabius Maximus was a Roman politician and general; he is my namesake."><sup>*</sup></span>
+            h3 A biologist who likes to code
 
-        <!-- Main Page Content and Sidebar -->
-        <div class="row">
-          <!-- Main Blog Content -->
-            <div class="large-12 columns row-semi-transparent text-center" role="content">
-              
+        <!-- Main Page Content -->
+        .row
+          .large-12.columns.row-semi-transparent.text-center role="content"
               | {{ content }}
-            </div>
-        </div>
-          <!-- End Main Content -->
+        <!-- End Page Content -->
 
   <!-- Footer -->
-  <div id="footer">
-    <div class="row">
-      <div class="large-12 columns text-center" role="content">
-          <ul class="icon-list">
-            <li><a href="mailto:fabian@qfma.de"><i class="fi-mail large-white-icon"></i></a></li>
-            <li><i class="fi-social-twitter large-white-icon"></i></li>
-            <li><i class="fi-social-github large-white-icon"></i></li>
-          </ul>
-      </div>
-    </div>
-  </div>
+  #footer
+    .row
+      .large-12.columns.text-center role="content"
+          ul.icon-list
+            li
+              a href="mailto:fabian@qfma.de"
+                i.fi-mail.large-black-icon
+            li
+              a href="https://twitter.com/fbnzimmer"
+                i.fi-social-twitter.large-black-icon
+            li
+              a href="https://github.com/qfma/"
+                i.fi-social-github.large-black-icon
 
-
+    <!-- Scripts -->  
     | {% javascript jquery/jquery %}
     | {% javascript fastclick/lib/fastclick %}
     | {% javascript foundation/js/foundation/foundation %}
     | {% javascript foundation/js/foundation/foundation.topbar %}
     | {% javascript foundation/js/foundation/foundation.tooltip %}
 
-    <script>$(document).foundation();</script>
+    javascript: 
+      $(document).foundation();
