@@ -16,34 +16,30 @@ html
         | {% slim topbar.slim %}
 
         <!-- Main Page Content and Sidebar -->
-        <div class="row full-height">
+        .row.full-height
 
           <!-- Main Blog Content -->
-          <div class="large-12 columns" role="content">
+          .large-12.columns role="content"
            
            | {{ content }}
-
-          </div>
-        </div>
           <!-- End Main Content -->
 
  
   <!-- Footer -->
-  <div id="footer">
-    <div class="row">
-      <div class="large-12 columns text-center" role="content">
-          <ul class="icon-list center">
-            <li><a href="mailto:fabian@qfma.de"><i class="fi-mail large-black-icon"></i></a></li>
-            <li><i class="fi-social-twitter large-black-icon"></i></li>
-            <li><i class="fi-social-github large-black-icon"></i></li>
-          </ul>
+  #footer
+    .row
+      .large-12.columns.text-center role="content"
+          ul.icon-list
+            li
+              a href="mailto:fabian@qfma.de"
+                i.fi-mail.large-black-icon
+            li
+              a href="https://twitter.com/fbnzimmer"
+                i.fi-social-twitter.large-black-icon
+            li
+              a href="https://github.com/qfma/"
+                i.fi-social-github.large-black-icon
           p Impressum | 2014 QFMA
-      </div>
-    </div>
-  </div>
-
-
-
 
     | {% javascript jquery/jquery %}
     | {% javascript fastclick/lib/fastclick %}
