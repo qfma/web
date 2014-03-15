@@ -1,6 +1,8 @@
-name: Your New Jekyll Site
+name: QFMA
 markdown: redcarpet
 pygments: true
+url: http://qfma.de
+description: The blog and webpage of Fabian Zimmer
 
 # Use a separate source and build folder:
 source: ./src
