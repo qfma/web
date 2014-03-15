@@ -19,3 +19,5 @@ assets:
   compress:
     css: sass
     js: uglifier
+    gzip: [ text/css, application/javascript ]
+    cachebust: hard
