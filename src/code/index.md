@@ -3,4 +3,5 @@ layout: default
 title: QFMA code
 ---
 
-h1 Code
+## Code
+-------------------
