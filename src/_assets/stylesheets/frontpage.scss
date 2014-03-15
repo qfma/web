@@ -16,6 +16,7 @@
 p {
   font-size: 1.3em
 }
+
 h2 {
     font-size: 5em;
     font-family: "Cinzel";
@@ -36,18 +37,15 @@ h3, h4, p {
     background-color: rgba(0,0,0,0.7);
 }
 
-
 .large-white-icon {
   font-size: 3em;
   color: white;
 }
 
-
 .large-black-icon {
   font-size: 3em;
   color: black;
 }
-
 
 .icon-list {
   @include inline-list;
