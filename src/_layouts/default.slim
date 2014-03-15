@@ -26,16 +26,12 @@ html
            | {{ content }}
           <!-- End Main Content -->
 
+        <!-- Scripts -->  
+        | {% javascript jquery/jquery %}
+        | {% javascript fastclick/lib/fastclick %}
+        | {% javascript foundation/js/foundation_min %}
+
+        <script>$(document).foundation();</script>
  
   <!-- Footer -->
   | {%slim footer.slim %}
-
-  <!-- Scripts --> 
-  | {% javascript jquery/jquery %}
-  | {% javascript fastclick/lib/fastclick %}
-  | {% javascript foundation/js/foundation_min %}
-  / | {% javascript foundation/js/foundation/foundation.topbar.js %}
-  
-  
-  javascript:
-    $(document).foundation();
