@@ -28,15 +28,15 @@ html
               | {{ content }}
         <!-- End Page Content -->
 
-    <!-- Footer -->
-    | {%slim footer.slim %}
+  <!-- Footer -->
+  | {%slim footer.slim %}
 
-    <!-- Scripts -->  
-    | {% javascript jquery/jquery %}
-    | {% javascript fastclick/lib/fastclick %}
-    | {% javascript foundation/js/foundation/foundation %}
-    | {% javascript foundation/js/foundation/foundation.topbar %}
-    | {% javascript foundation/js/foundation/foundation.tooltip %}
+  <!-- Scripts -->  
+  | {% javascript jquery/jquery %}
+  | {% javascript fastclick/lib/fastclick %}
+  | {% javascript foundation/js/foundation/foundation %}
+  | {% javascript foundation/js/foundation/foundation.topbar %}
+  | {% javascript foundation/js/foundation/foundation.tooltip %}
 
-    javascript: 
-      $(document).foundation();
+  javascript: 
+    $(document).foundation();
