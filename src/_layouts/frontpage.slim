@@ -3,7 +3,7 @@ html
   head
     | {% stylesheet frontpage %}
     | {% stylesheet fullscreen-background %}
-    | {% javascript modernizr/modernizr %}
+    | {% javascript foundation/js/vendor/modernizr %}
 
     title
       | {{ page.title }}
@@ -28,11 +28,12 @@ html
         <!-- End Page Content -->
 
         <!-- Scripts -->  
-        | {% javascript jquery/jquery %}
-        | {% javascript fastclick/lib/fastclick %}
-        | {% javascript foundation/js/foundation_min %}
+        | {% javascript foundation/js/vendor/jquery %}
+        | {% javascript foundation/js/vendor/fastclick %}
+        | {% javascript foundation/js/foundation.min %}
 
-        <script>$(document).foundation();</script>
+        javascript:
+          $(document).foundation();
 
   <!-- Footer -->
   | {%slim footer.slim %}

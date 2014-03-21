@@ -4,7 +4,7 @@ html
     | {% stylesheet blog %}
     | {% stylesheet fullscreen-background %}
     | {% stylesheet pygments %}
-    | {% javascript modernizr/modernizr %}
+    | {% javascript foundation/js/vendor/modernizr %}
 
     title
       | {{ page.title }}
@@ -23,15 +23,16 @@ html
           <!-- Main Blog Content -->
           .large-12.columns role="content"
            
-           | {{ content }}
+            | {{ content }}
           <!-- End Main Content -->
 
         <!-- Scripts -->  
-        | {% javascript jquery/jquery %}
-        | {% javascript fastclick/lib/fastclick %}
-        | {% javascript foundation/js/foundation_min %}
+        | {% javascript foundation/js/vendor/jquery %}
+        | {% javascript foundation/js/vendor/fastclick %}
+        | {% javascript foundation/js/foundation.min %}
 
-        <script>$(document).foundation();</script>
+        javascript:
+          $(document).foundation()
  
   <!-- Footer -->
   | {%slim footer.slim %}
