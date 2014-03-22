@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-jekyll build && rsync -avz --delete build/ uberspace:~/html
+jekyll build && rsync -avz  --delete --exclude=".htaccess" build/ uberspace:~/html
