@@ -8,6 +8,11 @@ html
     title
       | {{ page.title }}
 
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="description" content="QFMA webpage"
+    meta name="author" content="Fabian Zimmer"
+
     link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml"
 
   #wrap
@@ -30,10 +35,11 @@ html
         <!-- Scripts -->  
         | {% javascript foundation/js/vendor/jquery %}
         | {% javascript foundation/js/vendor/fastclick %}
-        | {% javascript foundation/js/foundation.min %}
+        | {% javascript foundation/js/foundation_min %}
 
         javascript:
           $(document).foundation();
-
+          var doc = document.documentElement;
+          doc.setAttribute('data-useragent', navigator.userAgent);
   <!-- Footer -->
   | {%slim footer.slim %}
