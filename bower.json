@@ -15,13 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "fastclick": "latest",
-    "highlightjs": "latest",
     "foundation": "latest",
-    "foundation-icon-fonts": "latest",
-    "jquery": "latest",
-    "normalize-css": "latest",
-    "modernizr": "latest",
-    "yepnope": "latest"
+    "foundation-icon-fonts": "latest"
   }
 }
