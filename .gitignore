@@ -1,7 +1,2 @@
 .DS_Store
-build
-bower_components
-.sass-cache
-.ruby-gemset
-.ruby-version
-Gemfile.lock
+static
