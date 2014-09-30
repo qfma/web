@@ -1,0 +1,42 @@
+{{ template "theme/partials/header.html" . }}
+    <!-- Intro Header -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-centered">
+                <center><h3 class="fz-frontpage">Fabian Zimmer - Bioinformatics</h3></center>
+                <div id="helix-animation">
+                    <script src="{{ .Site.BaseUrl }}/js/d3.min.js"></script>
+                    <script src="{{ .Site.BaseUrl }}/js/jquery-2.1.1.min.js"></script>
+                    <script type="text/javascript">
+                        $(window).bind("load", function() {
+                            var script=document.createElement('script');
+                            script.type='text/javascript';
+                            script.src="{{ .Site.BaseUrl }}/js/helix-logo.min.js";
+                            $("#helix-animation").append(script);
+                        });
+                    </script>
+                    <script type="text/javascript">
+                        // Resize the helix to the viewport and make the layout responsive
+                        var chart = $("#helix"),
+                            aspect = chart.width() / chart.height(),
+                            container = chart.parent();
+                        $(window).on("resize", function() {
+                            var targetWidth = container.width();
+                            chart.attr("width", targetWidth);
+                            chart.attr("height", Math.round(targetWidth / aspect));
+                        }).trigger("resize");
+                    </script>
+                </div>
+                <center>
+                <div class="frontpage">
+                
+                <p>Currently, I am doing my PhD in the group of <a href="http://www.ucl.ac.uk/mank-group/">Prof Judith Mank</a> at University College London. I am mainly interested in understanding the evolution of gene expression, the evolution of sex chromosomes, linking genotype and phenotype and the evolution of gene families.</p>
+
+                <p>For a more detailed overview see the <a href="/research"> research section</a></p>
+                </center>
+                </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div>
+{{ template "theme/partials/footer.html" . }}

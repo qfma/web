@@ -1,0 +1,16 @@
+{{ template "theme/partials/header.html" . }}
+    <!-- Intro Header -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-centered">
+				<div id="post-list", style="margin-top:25px;">
+			     	<!-- <h2>Posts</h2> -->
+			      		{{ range .Data.Pages }}
+			      			<time class="pull-right">{{ .Date.Format "2/Jan/2006" }}</time> <a href="{{ .Permalink }}"><h4>{{ .Title }}</h4></a>
+			      			<!-- <p>{{.Description}}</p> -->
+			      		{{ end }}
+			    </div>
+            </div>
+        </div><!-- /.container -->
+    </div>
+{{ template "theme/partials/footer.html" . }}

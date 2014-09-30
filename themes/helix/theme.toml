@@ -1,0 +1,6 @@
+author = "Fabian Zimmer"
+description = "A light minimal theme used for my webpage"
+license = "MIT"
+name = "helix"
+source_repo = ""
+tags = ["blog", "portfolio"]

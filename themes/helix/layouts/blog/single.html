@@ -1,0 +1,15 @@
+{{ template "theme/partials/header.html" . }}
+    <!-- Intro Header -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-centered">
+                <span class="pager-sm"><a href="/blog">&larr; Back</a></span>    
+                <div class="post">
+                    <span><h2>{{.Title}}</h2>
+                    <p>~{{ .FuzzyWordCount }} words</p>
+                        {{ .Content }}
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div>
+{{ template "theme/partials/footer.html" . }}
