@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fabian's blog">
+        <meta name="author" content="Fabian Zimmer">
+        <title>QFMA</title>
+        <link rel="stylesheet" href="http://qfma.de/css/flatly.css">
+        <link rel="stylesheet" href="http://qfma.de/css/helix.css">
+    </head>
+
+     <body>
+
+        
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://qfma.de">
+                        <img class="img-responsive hidden-xs" src="http://qfma.de/img/qfma-helix-logo.svg">
+                        
+                        <img class="img-responsive visible-xs logo-small" src="http://qfma.de/img/qfma-helix-logo.svg">
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="page-scroll navbar-links" href="/about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/research">Research</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/publications">Publications</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-centered">
+                <span class="pager-sm"><a href="/blog">&larr; Back</a></span>    
+				<div class="post">
+                    <span><h2>Building a new homepage using Hugo</h2>
+                    <p>~300 words</p>
+			      		<p>I have decided to rebuilt my current homepage using Jekyll, the static site generator. Before this I used Octopress which helps you to get started in very little time. But, as a nice little side project, I decided to build my blog / webpage from scratch.</p>
+
+<pre><code>hugo server --theme=helix --buildDrafts --watch
+</code></pre>
+
+<pre><code>&lt;section id=&quot;main&quot;&gt;
+  &lt;div&gt;
+   &lt;h1 id=&quot;title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+    {{ range .Data.Pages }}
+        {{ .Render &quot;summary&quot;}}
+    {{ end }}
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+
+<p>Understanding how gene expression evolves and how selective pressures on the phenotype shape the evolution of gene expression is a major question in evolutionary biology. Even between very closely related species we observe an astonishing amount of phenotypic variation. This variation is partly the result of differences in gene content, such as through mutations in protein coding genes, but also the result of differences in gene expression. The genome is not static - each cell in a multi-cellular organism expresses genes differently, depending on tissue type, sex or environmental factors. In my research I try to understand how gene expression evolves within and between species.</p>
+
+<pre><code>def addToContextTree(seq, tree, maxN = 5):
+  for i in xrange(len(seq)):
+    current = tree
+    for n in range(maxN):
+      if (i - n) &gt;= 0:
+        word = seq[i-n]
+        if word not in current:
+          current[word] = [{}, 0]
+        current[word][1] += 1
+        current = current[word][0]
+</code></pre>
+
+				</div>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <div class="container text-center">
+                <ul class="list-inline">
+                  <li><a href="mailto:fabian (at) qfma.de"><i class="fa fa-envelope fa-2x icon-spacer icon-grey"></i></a></li>
+                  <li><a href="https://twitter.com/fbnzimmer"><i class="fa fa-twitter fa-2x icon-spacer icon-twitter"></i></a></li>
+                  <li><a href="https://github.com/qfma"><i class="fa fa-github fa-2x icon-spacer icon-grey"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="http://qfma.de/js/jquery-2.1.1.min.js"></script>
+        <script src="http://qfma.de/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/tomorrow.min.css">
+        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

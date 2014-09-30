@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fabian's blog">
+        <meta name="author" content="Fabian Zimmer">
+        <title>QFMA</title>
+        <link rel="stylesheet" href="http://qfma.de/css/flatly.css">
+        <link rel="stylesheet" href="http://qfma.de/css/helix.css">
+    </head>
+
+     <body>
+
+        
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://qfma.de">
+                        <img class="img-responsive hidden-xs" src="http://qfma.de/img/qfma-helix-logo.svg">
+                        
+                        <img class="img-responsive visible-xs logo-small" src="http://qfma.de/img/qfma-helix-logo.svg">
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="page-scroll navbar-links" href="/about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/research">Research</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/publications">Publications</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-centered">
+                <span class="pager-sm"><a href="/blog">&larr; Back</a></span>    
+				<div class="post">
+                    <span><h2>Primate DUF1220 analysis</h2>
+                    <p>~600 words</p>
+			      		
+
+<p>This document decscribes every command used to analyse the distribution of the DUF1220(<a href="http://pfam.xfam.org/family/duf1220">PF06758</a>) protein domains across various primates.
+The analyis and pipeline is based on some of the methods described by <a href="http://g3journal.org/content/2/9/977">O&rsquo;Bleness et al.</a>. The main difference to th O&rsquo;Bleness paper is,
+that BLAST has been replaced by nucleotide hidden markov models.</p>
+
+<h3 id="toc_0">Primate sequences used</h3>
+
+<p><strong><a href="http://www.ensembl.org/index.html">Ensembl</a></strong> version 76:</p>
+
+<ol>
+<li>Homo sapiens (Humans)</li>
+<li>Pan troglodytes (Common Chimpanzees)</li>
+<li>Gorilla gorilla (Gorilla)</li>
+<li>Pongo abelii (Orangutan)</li>
+<li>Nomascus leucogenys (Gibbon)</li>
+<li>Macaca mulatta (Rhesus Macaque)</li>
+<li>Tarsius syrichta (Tarsier)</li>
+<li>Microcebus murinus (Mouse lemur)</li>
+<li>Otolemur garnettii (Bushbaby)</li>
+<li>Callithrix jacchus (Marmoset)</li>
+<li>Papio anubis (Olive baboon)</li>
+</ol>
+
+<p><strong><a href="http://pre.ensembl.org/index.html">Pre-Ensembl</a></strong>:</p>
+
+<ol>
+<li>Macaca fasicularis (Crab-eating macaque)</li>
+<li>Papio hamadryas (Hamadryas baboon) <strong>Data requested</strong></li>
+<li>Saimiri boliviensis (Squirrel monkey) <strong>Data requested</strong></li>
+<li>Chlorocebus sabaeus (Green Vervet monkey) <strong>Data requested</strong></li>
+</ol>
+
+<p><strong>George et al. exomes:</strong></p>
+
+<p>Paper is <a href="http://genome.cshlp.org/content/21/10/1686.full">here</a> and data should be available <a href="http://depts.washington.edu/swansonw/Swanson_Lab/Data.html">here</a></p>
+
+<p><strong>Note</strong>: This requires a fucking propietory piece of crappy software that kills my internet connection. Yes, it kills my router, my modem, my computer.</p>
+
+<ol>
+<li>Chlorocebus aethiops (Grivet velvet monkey)</li>
+<li>Colobus angolensis (Angola colobus)</li>
+<li>Saguinus midas (red-handed tamarin)</li>
+<li>Macaque (duplication Ensembl)</li>
+</ol>
+
+<p><strong>MISC genomes:</strong></p>
+
+<ol>
+<li>Homo neanderthalensis (Neanderthal) <a href="http://neandertal.ensemblgenomes.org/index.html">Data download</a></li>
+</ol>
+
+<p><strong>Note:</strong> Only BAM alignments?</p>
+
+<ol>
+<li><p>Pan paniscus (Bonobo) <a href="http://www.eva.mpg.de/bonobo-genome/data.html">here</a></p></li>
+
+<li><p>Daubentonia madagascariensis (Aye-aye): Paper is <a href="http://gbe.oxfordjournals.org/content/4/2/126.long">here</a> data is <a href="http://giladlab.uchicago.edu/data/AyeAyeGenome/">here</a></p></li>
+</ol>
+
+<h3 id="toc_1">DUF1220 proteome annotation</h3>
+
+<p>The DUF1220(<a href="http://pfam.xfam.org/family/duf1220">PF06758</a>) seed alignment was downloaded from the PFAM database <a href="http://pfam.xfam.org/family/duf1220#tabview=tab3">here</a>.
+The hidden markov model was built using HMMER 3.1b1.</p>
+
+<pre><code class="bash">hmmbuild -n duf1220_seed --cpu 8  PF06758_seed.hmm PF06758_seed.txt
+</code></pre>
+
+<p>The PF06758_seed.hmm was used to search the proteomes of all 11 Ensembl primate genomes using <code>hmmsearch</code> with the gathering threshold.
+Only the longest isoform was used for all proteomes.</p>
+
+<pre><code class="bash"># Make longest isoforms
+./get-longest-isoform.py sequences/pep-all sequences/pep-all
+# Run hmmsearch against all proteomes
+./hmmsearch-vs-pep-all-longest.sh
+</code></pre>
+
+<p>The output domtblout and tblout files were stored in <code>2014-09-22-hmmsearch-vs-pep-all-longest</code></p>
+
+<pre><code class="bash"># Count the number of annotated domains
+./get-peptide-domain-count.sh
+Callithrix_jacchus: 13
+Gorilla_gorilla: 44
+Homo_sapiens: 246
+Macaca_mulatta: 23
+Microcebus_murinus: 3
+Nomascus_leucogenys: 0
+Otolemur_garnettii: 0
+Pan_troglodytes: 31
+Papio_anubis: 18
+Pongo_abelii: 21
+Tarsius_syrichta: 10
+</code></pre>
+
+<h3 id="toc_2">Extracting nucleotide alignments of DUF1220 from protein domain annotation</h3>
+
+<p>In order to detect DUF1220 in all species where protein translations are not availabe, we extracted the nucleotide sequences that correspond to
+the position of the DUF1220 domains. This information is extracted from the *.domtblout files.</p>
+
+<pre><code class="bash">./get-all-positions.sh
+</code></pre>
+
+<p>The output is stored in <code>2014-09-22-duf1220-all-ensembl-nucl</code>.  Alignment is done with <code>mafft</code>, nucl hmm build with <code>hmmbuild</code></p>
+
+<h3 id="toc_3">Verification of domains using cDNA</h3>
+
+<p>Numbers should be comparable to the peptide ones. Unclear at the moment why the general count increases.
+Cutoff is 1e-10</p>
+
+<pre><code class="bash">./nhmmer-vs-cdna-all-longest.sh
+./get-nucleotide-domain-count.sh
+Callithrix_jacchus: 11
+Gorilla_gorilla: 49
+Homo_sapiens: 319
+Macaca_mulatta: 24
+Microcebus_murinus: 2
+Nomascus_leucogenys: 0
+Otolemur_garnettii: 0
+Pan_troglodytes: 35
+Papio_anubis: 22
+Pongo_abelii: 23
+Tarsius_syrichta: 5
+</code></pre>
+
+<h3 id="toc_4">NHMMER search against toplevel dna</h3>
+
+<p>Cutoff is 1e-7, less strict because of larger phylogenetic distance.</p>
+
+<pre><code class="bash">./nhmmer-vs-dna.sh
+./get-dna-domain-count.sh
+Aye_aye: 28
+Callithrix_jacchus: 76
+Gorilla_gorilla: 99
+Homo_sapiens: 297
+Macaca_fascicularis: 68
+Macaca_mulatta: 75
+Microcebus_murinus: 4
+Nomascus_leucogenys: 59
+Otolemur_garnettii: 7
+Pan_paniscus: 34
+Pan_troglodytes: 138
+Papio_anubis: 76
+Pongo_abelii: 102
+Tarsius_syrichta: 65
+</code></pre>
+
+<p><strong>Just for kicks: Bash script highlighting</strong></p>
+
+<pre><code class="bash"># Run nhmmer against all dna toplevel files
+NOW=$(date +&quot;%Y-%m-%d&quot;)
+OUTFOLDER=&quot;$NOW-nhmmer-vs-dna&quot;
+for i in ./sequences/dna/*dna.toplevel.fa;
+        do
+            SPECIES=$(echo $(basename $i) | cut -f1 -d.);
+            nhmmer --dfamtblout &quot;duf1220-vs-$SPECIES.dfamtblout&quot; \
+                   --tblout &quot;duf1220-vs-$SPECIES.tblout&quot; \
+                   -E 1e-7 \
+                   --cpu=8 \
+                   ./$NOW-duf1220-all-ensembl-nucl/$NOW-duf1220-all-ensembl.hmm \
+                   $i;
+        done;
+mkdir $OUTFOLDER
+mv *.tblout $OUTFOLDER
+mv *.dfamtblout $OUTFOLDER
+</code></pre>
+
+				</div>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <div class="container text-center">
+                <ul class="list-inline">
+                  <li><a href="mailto:fabian (at) qfma.de"><i class="fa fa-envelope fa-2x icon-spacer icon-grey"></i></a></li>
+                  <li><a href="https://twitter.com/fbnzimmer"><i class="fa fa-twitter fa-2x icon-spacer icon-twitter"></i></a></li>
+                  <li><a href="https://github.com/qfma"><i class="fa fa-github fa-2x icon-spacer icon-grey"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="http://qfma.de/js/jquery-2.1.1.min.js"></script>
+        <script src="http://qfma.de/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/tomorrow.min.css">
+        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

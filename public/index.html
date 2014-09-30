@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fabian's blog">
+        <meta name="author" content="Fabian Zimmer">
+        <title>QFMA</title>
+        <link rel="stylesheet" href="http://qfma.de/css/flatly.css">
+        <link rel="stylesheet" href="http://qfma.de/css/helix.css">
+    </head>
+
+     <body>
+
+        
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://qfma.de">
+                        <img class="img-responsive hidden-xs" src="http://qfma.de/img/qfma-helix-logo.svg">
+                        
+                        <img class="img-responsive visible-xs logo-small" src="http://qfma.de/img/qfma-helix-logo.svg">
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="page-scroll navbar-links" href="/about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/research">Research</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-links" href="/publications">Publications</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-centered">
+                <center><h3 class="fz-frontpage">Fabian Zimmer - Bioinformatics</h3></center>
+                <div id="helix-animation">
+                    <script src="http://qfma.de/js/d3.min.js"></script>
+                    <script src="http://qfma.de/js/jquery-2.1.1.min.js"></script>
+                    <script type="text/javascript">
+                        $(window).bind("load", function() {
+                            var script=document.createElement('script');
+                            script.type='text/javascript';
+                            script.src="http:\/\/qfma.de/js/helix-logo.min.js";
+                            $("#helix-animation").append(script);
+                        });
+                    </script>
+                    <script type="text/javascript">
+                        
+                        var chart = $("#helix"),
+                            aspect = chart.width() / chart.height(),
+                            container = chart.parent();
+                        $(window).on("resize", function() {
+                            var targetWidth = container.width();
+                            chart.attr("width", targetWidth);
+                            chart.attr("height", Math.round(targetWidth / aspect));
+                        }).trigger("resize");
+                    </script>
+                </div>
+                <center>
+                <div class="frontpage">
+                
+                <p>Currently, I am doing my PhD in the group of <a href="http://www.ucl.ac.uk/mank-group/">Prof Judith Mank</a> at University College London. I am mainly interested in understanding the evolution of gene expression, the evolution of sex chromosomes, linking genotype and phenotype and the evolution of gene families.</p>
+
+                <p>For a more detailed overview see the <a href="/research"> research section</a></p>
+                </center>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <div class="container text-center">
+                <ul class="list-inline">
+                  <li><a href="mailto:fabian (at) qfma.de"><i class="fa fa-envelope fa-2x icon-spacer icon-grey"></i></a></li>
+                  <li><a href="https://twitter.com/fbnzimmer"><i class="fa fa-twitter fa-2x icon-spacer icon-twitter"></i></a></li>
+                  <li><a href="https://github.com/qfma"><i class="fa fa-github fa-2x icon-spacer icon-grey"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="http://qfma.de/js/jquery-2.1.1.min.js"></script>
+        <script src="http://qfma.de/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/tomorrow.min.css">
+        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
