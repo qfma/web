@@ -6,7 +6,10 @@ title = "publications"
 +++
 ### 2015
 
-* Dean R, **Zimmer F**, Mank JE (2015) Deficit of mito-nuclear genes on the human X chromosome predates sex chromosome formation. *Genome Biology and Evolution* <span class="label label-success" style="font-size: 8pt;">Accepted</span>
+
+* Wright AE, Harrison PW, **Zimmer F**, Montgomery SH, Pointer MA, Mank JE (2015)  Variation in promiscuity and sexual selection drives avian rate of Faster-Z evolution. *Molecular Ecology* <span class="label label-success" style="font-size: 8pt;">In press</span>
+
+* Dean R, **Zimmer F**, Mank JE (2015) Deficit of mito-nuclear genes on the human X chromosome predates sex chromosome formation. *Genome Biology and Evolution* <span class="label label-success" style="font-size: 8pt;">In press</span>
 
 ### 2014
 
