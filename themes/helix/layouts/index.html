@@ -3,15 +3,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-centered">
-                <center><h3 class="fz-frontpage">Fabian Zimmer - Bioinformatics</h3></center>
+                <center><h3 class="fz-frontpage">Fabian Zimmer</h3></center>
+                <center><h4><i>Bioinformatics & Computational Biology</i></h4></center>
                 <div id="helix-animation">
-                    <script src="{{ .Site.BaseUrl }}/js/d3.min.js"></script>
-                    <script src="{{ .Site.BaseUrl }}/js/jquery-2.1.1.min.js"></script>
+                    <script src="{{ .Site.BaseURL}}/js/d3.min.js"></script>
+                    <script src="{{ .Site.BaseURL }}/js/jquery-2.1.1.min.js"></script>
                     <script type="text/javascript">
                         $(window).bind("load", function() {
                             var script=document.createElement('script');
                             script.type='text/javascript';
-                            script.src="{{ .Site.BaseUrl }}/js/helix-logo.min.js";
+                            script.src="{{ .Site.BaseURL }}/js/helix-logo.min.js";
                             $("#helix-animation").append(script);
                         });
                     </script>
@@ -29,8 +30,8 @@
                 </div>
                 <center>
                 <div class="frontpage">
-                
-                <p>Currently, I am doing my PhD in the group of <a href="http://www.ucl.ac.uk/mank-group/">Prof Judith Mank</a> at University College London. I am mainly interested in understanding the evolution of gene expression, the evolution of sex chromosomes, linking genotype and phenotype and the evolution of gene families.</p>
+
+                <p align="justify">I am a final year PhD student in the group of <a href="http://www.ucl.ac.uk/mank-group/">Prof Judith Mank</a> at University College London (UCL) and expect to graduate in summer 2016. My work is on the interface of evolutionary biology and bioinformatics: I develop computational tools to answer fundamental biological questions. I am experienced working with complex and heterogeneous datasets and enjoy building tools in a diverse and international team. My ability to solve difficult problems and communicate results to others has been recognised with multiple awards.</p>
 
                 <p>For a more detailed overview see the <a href="/research"> research section</a></p>
                 </center>

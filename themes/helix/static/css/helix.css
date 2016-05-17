@@ -37,6 +37,10 @@ pre {
     max-width: 50%;
 }
 
+.logo-large {
+    max-width: 200%;
+}
+
 .helix-large {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -83,4 +87,8 @@ pre {
 
 .list-inline{
   margin-bottom: 0;
+}
+
+.verticalLine {
+    border-left: thick solid #ff0000;
 }

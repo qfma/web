@@ -6,7 +6,7 @@ layout = "page"
 +++
 ## Research
 
-I am currently in the second year of my PhD in the group of [Prof Judith Mank](http://www.ucl.ac.uk/mank-group/) at [University College London](http://ucl.ac.uk). My work is at the interface of evolutionary biology and bioinformatics and I try to find computational solutions in order to answer evolutionary questions. I have a strong background in computational biology and am able to develop in [Python](http://www.python.org/), [R](http://www.r-project.org/), [Ruby](https://www.ruby-lang.org/) and a bit of C++, and I work mainly under various flavors of [Linux](http://www.linuxfoundation.org/).
+I am currently in the final year of my PhD in the group of [Prof Judith Mank](http://www.ucl.ac.uk/mank-group/) at [University College London](http://ucl.ac.uk). My work is at the interface of evolutionary biology and bioinformatics and I try to find computational solutions in order to answer evolutionary questions. I have a strong background in computational biology and am able to develop in [Python](http://www.python.org/), [R](http://www.r-project.org/), [Ruby](https://www.ruby-lang.org/) and a bit of C++, and I work mainly under various flavors of [Linux](http://www.linuxfoundation.org/).
 
 My research focuses on the following aspects:
 
@@ -25,6 +25,6 @@ In my research I try to understand how sex chromosomes have evolved in general a
 ### Genome and Gene Family Evolution
 -------------------
 
-The availability of high-throughput DNA and RNA sequences makes it possible to study the evolution of single genes and whole genomes on an unprecedented scale. The current release of the [Ensembl](http://www.ensembl.org/) database contains ~70 species, with a strong focus on vertebrates and model organisms; however, the Genomes Online Database counts a total of around ~19000 completed genome projects ([source](http://genomesonline.org/cgi-bin/GOLD/index.cgi?page_requested=Complete+Genome+Projects)) and another ~21000 genomes currently being sequenced. 
+The availability of high-throughput DNA and RNA sequences makes it possible to study the evolution of single genes and whole genomes on an unprecedented scale. The current release of the [Ensembl](http://www.ensembl.org/) database contains ~70 species, with a strong focus on vertebrates and model organisms; however, the Genomes Online Database counts a total of around ~19000 completed genome projects ([source](http://genomesonline.org/cgi-bin/GOLD/index.cgi?page_requested=Complete+Genome+Projects)) and another ~21000 genomes currently being sequenced.
 
 In my research I combine genomics tools like ortholog/paralogy detection, synteny detection and molecular sequence evolution with gene expression data in order to reconstruct gene families in a phylogenetic context and understand how single-gene and whole-genome duplications impact the evolution of gene expression.
